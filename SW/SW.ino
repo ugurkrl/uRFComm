@@ -4,6 +4,8 @@ bool matrix1[2];
 bool matrix2[2];
 char keys1[] = {'B','C'};
 char keys2[] = {'A','D'};
+int packetbuffer[20];
+int bufferindex;
 int latchtime = 100;
 bool latch=false;
 unsigned long lastlatch = 0;
@@ -15,21 +17,27 @@ void setup(){
   pinMode(A1,OUTPUT);
   pinMode(8,INPUT_PULLUP);
   pinMode(9,INPUT_PULLUP);
+  pinMode(2,INPUT);
   oled.begin();
   oled.setCursor(0,16);
-
+  attachInterrupt(0,sendbuffer,RISING); 
 
 }
 
 void loop(){
-  
+    oled.clearBuffer();
+   oled.setCursor(0,16);
     oled.setDrawColor(1);
     oled.setFont(u8g2_font_helvB10_tr);
 
 scankey(matrix1 , matrix2);
 printbuffer();
-Serial.println(lastlatch);
-Serial.println(latchtime);
+
+ for(int i = 0; i < 20; i++)
+{
+  oled.print((char)packetbuffer[i]);
+}
+
   oled.sendBuffer();
 }
 
@@ -50,8 +58,10 @@ if(latch == false){
     for (int i=0; i<2; i++)  
     {
     if(matrix1[i]==0){
-      Serial.println(keys1[i]);
-      oled.print(keys1[i]);
+      packetbuffer[bufferindex] = keys1[i];
+      bufferindex = bufferindex + 1;
+      if(bufferindex >= 20){bufferindex = 20;}
+
       latch=true;
       lastlatch = millis();
     }
@@ -60,8 +70,10 @@ if(latch == false){
     for (int i=0; i<2; i++)  
     {
     if(matrix2[i]==0){
-      Serial.println(keys2[i]);
-      oled.print(keys2[i]);
+      packetbuffer[bufferindex] = keys2[i];
+      bufferindex = bufferindex + 1;
+      if(bufferindex >= 20){bufferindex = 20;}
+      
       latch=true;
       lastlatch = millis();
     }
@@ -70,4 +82,18 @@ if(latch == false){
 if(latch == true && (millis() >= lastlatch + latchtime ) ){
     latch = false;
 }
+}
+
+void sendbuffer(){   //butona basıldığında buffer aktar
+  for(int i = 0; i < 20; i++)
+{
+  Serial.print(packetbuffer[i]);
+}
+    for(int i = 0; i < 20; i++)
+{
+  packetbuffer[i]=0;
+  
+}
+bufferindex = 0;
+Serial.println();
 }
