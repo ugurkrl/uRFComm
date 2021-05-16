@@ -4,8 +4,9 @@ bool matrix1[2];
 bool matrix2[2];
 char keys1[] = {'B','C'};
 char keys2[] = {'A','D'};
-int latchct = 0;
-int latchtime = 500;
+int latchtime = 100;
+bool latch=false;
+unsigned long lastlatch = 0;
 U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled(U8G2_R0);
 
 void setup(){
@@ -27,8 +28,8 @@ void loop(){
 
 scankey(matrix1 , matrix2);
 printbuffer();
-
-
+Serial.println(lastlatch);
+Serial.println(latchtime);
   oled.sendBuffer();
 }
 
@@ -45,21 +46,28 @@ m2[1]=digitalRead(9);
 }
 
 void printbuffer(){
-  for (int i=0; i<2; i++)  
-{
-if(matrix1[i]==0){
-  Serial.println(keys1[i]);
-  oled.print(keys1[i]);
-  
+if(latch == false){
+    for (int i=0; i<2; i++)  
+    {
+    if(matrix1[i]==0){
+      Serial.println(keys1[i]);
+      oled.print(keys1[i]);
+      latch=true;
+      lastlatch = millis();
+    }
+    }
+    
+    for (int i=0; i<2; i++)  
+    {
+    if(matrix2[i]==0){
+      Serial.println(keys2[i]);
+      oled.print(keys2[i]);
+      latch=true;
+      lastlatch = millis();
+    }
+    }
 }
-}
-
-for (int i=0; i<2; i++)  
-{
-if(matrix2[i]==0){
-  Serial.println(keys2[i]);
-  oled.print(keys2[i]);
-  delay(100);
-}
+if(latch == true && (millis() >= lastlatch + latchtime ) ){
+    latch = false;
 }
 }
