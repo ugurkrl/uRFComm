@@ -1,10 +1,13 @@
+#include <ELECHOUSE_CC1101_SRC_DRV.h>
+
 #include <U8g2lib.h>
+
 #include <ELECHOUSE_CC1101_SRC_DRV.h>
 bool matrix1[2];
 bool matrix2[2];
 char keys1[] = {'B', 'C'};
 char keys2[] = {'A', 'D'};
-int packetbuffer[20];
+byte packetbuffer[20];
 int bufferindex;
 int latchtime = 100;
 bool latch = false;
@@ -94,7 +97,7 @@ void sendbuffer() {  //butona basıldığında buffer aktar
   {
     Serial.print(packetbuffer[i]);
   }
-  ELECHOUSE_cc1101.SendData((int)packetbuffer,20 );
+  ELECHOUSE_cc1101.SendData(packetbuffer,20 );
   for (int i = 0; i < 20; i++)
   {
     packetbuffer[i] = 0;
