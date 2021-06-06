@@ -1,0 +1,373 @@
+Added Component: Designator=S1(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S2(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S3(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S4(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S5(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S6(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S7(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S8(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S9(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S10(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S11(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S12(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S13(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S14(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S15(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S16(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S17(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S18(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S19(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S20(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S21(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S22(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S23(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S24(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S25(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S26(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S27(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S28(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S29(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S30(Tactile Switch THT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Omron"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B3F-1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B3F-1000/Omron%20Electronics%20Inc-EMC%20Div/view-part/48569/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetS1_1 Pin=S1-1
+Added Pin To Net: NetName=NetS1_1 Pin=S1-1
+Added Pin To Net: NetName=NetS1_1 Pin=S7-1
+Added Pin To Net: NetName=NetS1_1 Pin=S7-1
+Added Pin To Net: NetName=NetS1_1 Pin=S13-1
+Added Pin To Net: NetName=NetS1_1 Pin=S13-1
+Added Pin To Net: NetName=NetS1_1 Pin=S19-1
+Added Pin To Net: NetName=NetS1_1 Pin=S19-1
+Added Pin To Net: NetName=NetS1_1 Pin=S25-1
+Added Pin To Net: NetName=NetS1_1 Pin=S25-1
+Added Net: Name=NetS1_1
+Added Pin To Net: NetName=NetS1_2 Pin=S1-2
+Added Pin To Net: NetName=NetS1_2 Pin=S1-2
+Added Pin To Net: NetName=NetS1_2 Pin=S2-2
+Added Pin To Net: NetName=NetS1_2 Pin=S2-2
+Added Pin To Net: NetName=NetS1_2 Pin=S3-2
+Added Pin To Net: NetName=NetS1_2 Pin=S3-2
+Added Pin To Net: NetName=NetS1_2 Pin=S4-2
+Added Pin To Net: NetName=NetS1_2 Pin=S4-2
+Added Pin To Net: NetName=NetS1_2 Pin=S5-2
+Added Pin To Net: NetName=NetS1_2 Pin=S5-2
+Added Pin To Net: NetName=NetS1_2 Pin=S6-2
+Added Pin To Net: NetName=NetS1_2 Pin=S6-2
+Added Net: Name=NetS1_2
+Added Pin To Net: NetName=NetS2_1 Pin=S2-1
+Added Pin To Net: NetName=NetS2_1 Pin=S2-1
+Added Pin To Net: NetName=NetS2_1 Pin=S8-1
+Added Pin To Net: NetName=NetS2_1 Pin=S8-1
+Added Pin To Net: NetName=NetS2_1 Pin=S14-1
+Added Pin To Net: NetName=NetS2_1 Pin=S14-1
+Added Pin To Net: NetName=NetS2_1 Pin=S20-1
+Added Pin To Net: NetName=NetS2_1 Pin=S20-1
+Added Pin To Net: NetName=NetS2_1 Pin=S26-1
+Added Pin To Net: NetName=NetS2_1 Pin=S26-1
+Added Net: Name=NetS2_1
+Added Pin To Net: NetName=NetS3_1 Pin=S3-1
+Added Pin To Net: NetName=NetS3_1 Pin=S3-1
+Added Pin To Net: NetName=NetS3_1 Pin=S9-1
+Added Pin To Net: NetName=NetS3_1 Pin=S9-1
+Added Pin To Net: NetName=NetS3_1 Pin=S15-1
+Added Pin To Net: NetName=NetS3_1 Pin=S15-1
+Added Pin To Net: NetName=NetS3_1 Pin=S21-1
+Added Pin To Net: NetName=NetS3_1 Pin=S21-1
+Added Pin To Net: NetName=NetS3_1 Pin=S27-1
+Added Pin To Net: NetName=NetS3_1 Pin=S27-1
+Added Net: Name=NetS3_1
+Added Pin To Net: NetName=NetS4_1 Pin=S4-1
+Added Pin To Net: NetName=NetS4_1 Pin=S4-1
+Added Pin To Net: NetName=NetS4_1 Pin=S10-1
+Added Pin To Net: NetName=NetS4_1 Pin=S10-1
+Added Pin To Net: NetName=NetS4_1 Pin=S16-1
+Added Pin To Net: NetName=NetS4_1 Pin=S16-1
+Added Pin To Net: NetName=NetS4_1 Pin=S22-1
+Added Pin To Net: NetName=NetS4_1 Pin=S22-1
+Added Pin To Net: NetName=NetS4_1 Pin=S28-1
+Added Pin To Net: NetName=NetS4_1 Pin=S28-1
+Added Net: Name=NetS4_1
+Added Pin To Net: NetName=NetS5_1 Pin=S5-1
+Added Pin To Net: NetName=NetS5_1 Pin=S5-1
+Added Pin To Net: NetName=NetS5_1 Pin=S11-1
+Added Pin To Net: NetName=NetS5_1 Pin=S11-1
+Added Pin To Net: NetName=NetS5_1 Pin=S17-1
+Added Pin To Net: NetName=NetS5_1 Pin=S17-1
+Added Pin To Net: NetName=NetS5_1 Pin=S23-1
+Added Pin To Net: NetName=NetS5_1 Pin=S23-1
+Added Pin To Net: NetName=NetS5_1 Pin=S29-1
+Added Pin To Net: NetName=NetS5_1 Pin=S29-1
+Added Net: Name=NetS5_1
+Added Pin To Net: NetName=NetS6_1 Pin=S6-1
+Added Pin To Net: NetName=NetS6_1 Pin=S6-1
+Added Pin To Net: NetName=NetS6_1 Pin=S12-1
+Added Pin To Net: NetName=NetS6_1 Pin=S12-1
+Added Pin To Net: NetName=NetS6_1 Pin=S18-1
+Added Pin To Net: NetName=NetS6_1 Pin=S18-1
+Added Pin To Net: NetName=NetS6_1 Pin=S24-1
+Added Pin To Net: NetName=NetS6_1 Pin=S24-1
+Added Pin To Net: NetName=NetS6_1 Pin=S30-1
+Added Pin To Net: NetName=NetS6_1 Pin=S30-1
+Added Net: Name=NetS6_1
+Added Pin To Net: NetName=NetS7_2 Pin=S7-2
+Added Pin To Net: NetName=NetS7_2 Pin=S7-2
+Added Pin To Net: NetName=NetS7_2 Pin=S8-2
+Added Pin To Net: NetName=NetS7_2 Pin=S8-2
+Added Pin To Net: NetName=NetS7_2 Pin=S9-2
+Added Pin To Net: NetName=NetS7_2 Pin=S9-2
+Added Pin To Net: NetName=NetS7_2 Pin=S10-2
+Added Pin To Net: NetName=NetS7_2 Pin=S10-2
+Added Pin To Net: NetName=NetS7_2 Pin=S11-2
+Added Pin To Net: NetName=NetS7_2 Pin=S11-2
+Added Pin To Net: NetName=NetS7_2 Pin=S12-2
+Added Pin To Net: NetName=NetS7_2 Pin=S12-2
+Added Net: Name=NetS7_2
+Added Pin To Net: NetName=NetS13_2 Pin=S13-2
+Added Pin To Net: NetName=NetS13_2 Pin=S13-2
+Added Pin To Net: NetName=NetS13_2 Pin=S14-2
+Added Pin To Net: NetName=NetS13_2 Pin=S14-2
+Added Pin To Net: NetName=NetS13_2 Pin=S15-2
+Added Pin To Net: NetName=NetS13_2 Pin=S15-2
+Added Pin To Net: NetName=NetS13_2 Pin=S16-2
+Added Pin To Net: NetName=NetS13_2 Pin=S16-2
+Added Pin To Net: NetName=NetS13_2 Pin=S17-2
+Added Pin To Net: NetName=NetS13_2 Pin=S17-2
+Added Pin To Net: NetName=NetS13_2 Pin=S18-2
+Added Pin To Net: NetName=NetS13_2 Pin=S18-2
+Added Net: Name=NetS13_2
+Added Pin To Net: NetName=NetS19_2 Pin=S19-2
+Added Pin To Net: NetName=NetS19_2 Pin=S19-2
+Added Pin To Net: NetName=NetS19_2 Pin=S20-2
+Added Pin To Net: NetName=NetS19_2 Pin=S20-2
+Added Pin To Net: NetName=NetS19_2 Pin=S21-2
+Added Pin To Net: NetName=NetS19_2 Pin=S21-2
+Added Pin To Net: NetName=NetS19_2 Pin=S22-2
+Added Pin To Net: NetName=NetS19_2 Pin=S22-2
+Added Pin To Net: NetName=NetS19_2 Pin=S23-2
+Added Pin To Net: NetName=NetS19_2 Pin=S23-2
+Added Pin To Net: NetName=NetS19_2 Pin=S24-2
+Added Pin To Net: NetName=NetS19_2 Pin=S24-2
+Added Net: Name=NetS19_2
+Added Pin To Net: NetName=NetS25_2 Pin=S25-2
+Added Pin To Net: NetName=NetS25_2 Pin=S25-2
+Added Pin To Net: NetName=NetS25_2 Pin=S26-2
+Added Pin To Net: NetName=NetS25_2 Pin=S26-2
+Added Pin To Net: NetName=NetS25_2 Pin=S27-2
+Added Pin To Net: NetName=NetS25_2 Pin=S27-2
+Added Pin To Net: NetName=NetS25_2 Pin=S28-2
+Added Pin To Net: NetName=NetS25_2 Pin=S28-2
+Added Pin To Net: NetName=NetS25_2 Pin=S29-2
+Added Pin To Net: NetName=NetS25_2 Pin=S29-2
+Added Pin To Net: NetName=NetS25_2 Pin=S30-2
+Added Pin To Net: NetName=NetS25_2 Pin=S30-2
+Added Net: Name=NetS25_2
+Added Class: Name=Buton
+Added Room: Name=Buton

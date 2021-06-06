@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=YVDQLBHG
 
 [Document2]
-DocumentPath=Schematic.SchDoc
+DocumentPath=Buton.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
