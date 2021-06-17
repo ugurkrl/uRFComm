@@ -5,7 +5,8 @@ bool line1[10];
 bool line2[10];
 bool line3[10];
 
-char keys[] = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
+char shiftkeys[] = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
+char keys[] = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ' ', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ' ', ' ', ' '};
 
 byte packetbuffer[20];
 int bufferindex;
@@ -156,7 +157,7 @@ void printbuffer() {
     for (int i = 0; i < 10; i++)
     {
       if (line2[i] == 0) {
-        packetbuffer[bufferindex] = keys[i+10];
+        packetbuffer[bufferindex] = keys[i + 10];
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
@@ -170,7 +171,7 @@ void printbuffer() {
     for (int i = 0; i < 10; i++)
     {
       if (line3[i] == 0) {
-        packetbuffer[bufferindex] = keys[i+20];
+        packetbuffer[bufferindex] = keys[i + 20];
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
