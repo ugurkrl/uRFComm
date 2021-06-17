@@ -5,8 +5,8 @@ bool line1[10];
 bool line2[10];
 bool line3[10];
 
-char keys1[] = {'B', 'C'};
-char keys2[] = {'A', 'D'};
+char keys[] = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
+
 byte packetbuffer[20];
 int bufferindex;
 int latchtime = 100;
@@ -139,10 +139,10 @@ void scankey(bool *m1, bool *m2, bool *m3) {
 
 void printbuffer() {
   if (latch == false) {
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 10; i++)
     {
       if (line1[i] == 0) {
-        packetbuffer[bufferindex] = keys1[i];
+        packetbuffer[bufferindex] = keys[i];
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
@@ -153,10 +153,24 @@ void printbuffer() {
       }
     }
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 10; i++)
     {
       if (line2[i] == 0) {
-        packetbuffer[bufferindex] = keys2[i];
+        packetbuffer[bufferindex] = keys[i+10];
+        bufferindex = bufferindex + 1;
+        if (bufferindex >= 20) {
+          bufferindex = 20;
+        }
+
+        latch = true;
+        lastlatch = millis();
+      }
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+      if (line3[i] == 0) {
+        packetbuffer[bufferindex] = keys[i+20];
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
