@@ -10,7 +10,7 @@ const char keys[30] PROGMEM = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
 
 byte packetbuffer[20];
 int bufferindex;
-int latchtime = 200;
+int latchtime = 100;
 bool latch = false;
 bool alt, shift, enter, del = false;
 unsigned long lastlatch = 0;
@@ -146,17 +146,25 @@ void printbuffer() {
   int j;
   if (latch == false) {
     if (line2[9] == 0) {
-      packetbuffer[bufferindex] = 0;
       bufferindex = bufferindex - 1;
+      packetbuffer[bufferindex] = 0;
+      lastlatch = millis();
+      latch = true;
     }
     if (line3[7] == 0) {
       shift = !shift;
+      lastlatch = millis();
+      latch = true;
     }
     if (line3[8] == 0) {
       alt = !alt;
+      lastlatch = millis();
+      latch = true;
     }
     if (line3[9] == 0) {
       enter = !enter;
+      lastlatch = millis();
+      latch = true;
     }
 
     for (int i = 0; i < 10; i++)
