@@ -145,26 +145,34 @@ void scankey(bool *m1, bool *m2, bool *m3) {
 void printbuffer() {
   int j;
   if (latch == false) {
-    if (line2[9] == 0) {
+    if (line2[9] == 0) { //Del
       bufferindex = bufferindex - 1;
       packetbuffer[bufferindex] = 0;
       lastlatch = millis();
       latch = true;
     }
-    if (line3[7] == 0) {
+    if (line3[7] == 0) { //Shift
       shift = !shift;
       lastlatch = millis();
       latch = true;
     }
-    if (line3[8] == 0) {
+    if (line3[8] == 0) { //Alt
       alt = !alt;
       lastlatch = millis();
       latch = true;
     }
-    if (line3[9] == 0) {
+    if (line3[9] == 0) { //Enter
       enter = !enter;
       lastlatch = millis();
       latch = true;
+    }
+
+    if (line3[4] ==0  & line3[5] == 0) { //Space
+      packetbuffer[bufferindex] = ' ';
+      bufferindex = bufferindex + 1;
+      lastlatch = millis();
+      latch = true;
+      return;
     }
 
     for (int i = 0; i < 10; i++)
