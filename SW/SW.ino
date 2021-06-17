@@ -4,20 +4,20 @@
 bool line1[10];
 bool line2[10];
 bool line3[10];
-
 const char shiftkeys[30] PROGMEM = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
 const char keys[30] PROGMEM = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ' ', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ' ', ' ', ' '};
 
-byte packetbuffer[20];
+unsigned int packetbuffer[25];
 int bufferindex;
 int latchtime = 100;
 bool latch = false;
 bool alt, shift, enter, del = false;
 unsigned long lastlatch = 0;
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled(U8G2_R0);
+int displine = 1;
+U8G2_SSD1306_128X64_NONAME_1_HW_I2C oled(U8G2_R0);
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println("sup");
   pinMode(PIN_PD3, OUTPUT);
   pinMode(PIN_PD4, OUTPUT);
@@ -39,45 +39,65 @@ void setup() {
 }
 
 void loop() {
-  oled.clearBuffer();
-  oled.setCursor(0, 16);
-  oled.setFont(u8g2_font_helvB10_tr);
+
+
+  oled.firstPage();
+
+
+
+
+
   scankey(line1 , line2, line3);
   printbuffer();
 
+  /* Serial.println();
+    for (int i = 0; i < 10; i++)
+    {
+     Serial.print(line1[i]);
+    }
+    Serial.println();
+    for (int i = 0; i < 10; i++)
+    {
+     Serial.print(line2[i]);
+    }
+    Serial.println();
+    for (int i = 0; i < 10; i++)
+    {
+     Serial.print(line3[i]);
+    }
+    Serial.println();
+    for (int i = 0; i < 20; i++)
+    {
+     Serial.print((char)packetbuffer[i]);
+    }
+  */
 
-  Serial.println();
-  for (int i = 0; i < 10; i++)
-  {
-    Serial.print(line1[i]);
-  }
-  Serial.println();
-  for (int i = 0; i < 10; i++)
-  {
-    Serial.print(line2[i]);
-  }
-  Serial.println();
-  for (int i = 0; i < 10; i++)
-  {
-    Serial.print(line3[i]);
-  }
-  Serial.println();
-  for (int i = 0; i < 20; i++)
-  {
-    Serial.print((char)packetbuffer[i]);
-  }
+  oled.clearBuffer();
+
+  int lineht = oled.getMaxCharHeight();
+  oled.setFont(u8g2_font_helvB10_tr);
 
 
-  Serial.println();
-  for (int i = 0; i < 20; i++)
-  {
-    oled.print((char)packetbuffer[i]);
-  }
 
-  oled.sendBuffer();
+  do {
+   
+   
+    displine = 0;     //Bufferı yazdır
+    oled.setCursor(0, 28);
+    for (int i = 0; i < 25; i++) { 
+      oled.print((char)packetbuffer[i]);
+      if (oled.tx > 115) {
+        displine = displine + 1;
+        oled.setCursor(0, 28 + (lineht * displine));
+        oled.tx = 0;
+      }
+    }
+  }
+  while ( oled.nextPage() );
+
 }
 
-void scankey(bool *m1, bool *m2, bool *m3) {
+void scankey(bool * m1, bool * m2, bool * m3) {
 
   digitalWrite(PIN_PD3, LOW); //KBA
   digitalWrite(PIN_PD4, HIGH); //KBB
@@ -167,7 +187,7 @@ void printbuffer() {
       latch = true;
     }
 
-    if (line3[4] ==0  & line3[5] == 0) { //Space
+    if (line3[4] == 0  & line3[5] == 0) { //Space
       packetbuffer[bufferindex] = ' ';
       bufferindex = bufferindex + 1;
       lastlatch = millis();
@@ -186,8 +206,8 @@ void printbuffer() {
           packetbuffer[bufferindex] = pgm_read_byte_near(keys + i);
         }
         bufferindex = bufferindex + 1;
-        if (bufferindex >= 20) {
-          bufferindex = 20;
+        if (bufferindex >= 25) {
+          bufferindex = 25;
         }
 
         latch = true;
@@ -203,8 +223,8 @@ void printbuffer() {
           packetbuffer[bufferindex] = pgm_read_byte_near(keys + i + 10);
         }
         bufferindex = bufferindex + 1;
-        if (bufferindex >= 20) {
-          bufferindex = 20;
+        if (bufferindex >= 25) {
+          bufferindex = 25;
         }
 
         latch = true;
@@ -220,8 +240,8 @@ void printbuffer() {
           packetbuffer[bufferindex] = pgm_read_byte_near(keys + i + 20);
         }
         bufferindex = bufferindex + 1;
-        if (bufferindex >= 20) {
-          bufferindex = 20;
+        if (bufferindex >= 25) {
+          bufferindex = 25;
         }
 
 
@@ -241,7 +261,7 @@ void sendbuffer() {  //butona basıldığında buffer aktar
   {
     Serial.print(packetbuffer[i]);
   }
-  ELECHOUSE_cc1101.SendData(packetbuffer, 20 );
+  //  ELECHOUSE_cc1101.SendData(packetbuffer, 20 );
   for (int i = 0; i < 20; i++)
   {
     packetbuffer[i] = 0;
