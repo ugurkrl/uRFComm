@@ -3,8 +3,12 @@
 #include <U8g2lib.h>
 
 #include <ELECHOUSE_CC1101_SRC_DRV.h>
-bool matrix1[2];
-bool matrix2[2];
+bool matrix1[6];
+bool matrix2[6];
+bool matrix3[6];
+bool matrix4[6];
+bool matrix5[6];
+bool matrix6[6];
 char keys1[] = {'B', 'C'};
 char keys2[] = {'A', 'D'};
 byte packetbuffer[20];
@@ -16,13 +20,22 @@ U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled(U8G2_R0);
 
 void setup() {
   Serial.begin(9600);
-  pinMode(A0, OUTPUT);
-  pinMode(A1, OUTPUT);
-  pinMode(8, INPUT_PULLUP);
-  pinMode(9, INPUT_PULLUP);
+  Serial.println("sup");
+  pinMode(PIN_PD3, OUTPUT);
+  pinMode(PIN_PD4, OUTPUT);
+  pinMode(PIN_PE0, OUTPUT);
+  pinMode(PIN_PE1, OUTPUT);
+  pinMode(PIN_PD5, OUTPUT);
+  pinMode(PIN_PD7, INPUT_PULLUP);
+  pinMode(PIN_PB0, INPUT_PULLUP);
+  pinMode(PIN_PB1, INPUT_PULLUP);
+  pinMode(PIN_PC2, INPUT_PULLUP);
+  pinMode(PIN_PC1, INPUT_PULLUP);
+  pinMode(PIN_PC0, INPUT_PULLUP);
+  
   pinMode(3, INPUT);
   oled.begin();
-  attachInterrupt(1, sendbuffer, RISING);
+  // attachInterrupt(1, sendbuffer, RISING);
   cc1101set();
 
 
@@ -33,28 +46,115 @@ void loop() {
   oled.clearBuffer();
   oled.setCursor(0, 16);
   oled.setFont(u8g2_font_helvB10_tr);
-  scankey(matrix1 , matrix2);
+  scankey(matrix1 , matrix2 ,matrix3, matrix4, matrix5, matrix6);
   printbuffer();
 
-  for (int i = 0; i < 20; i++)
+ 
+  Serial.println();
+  for (int i = 0; i < 6; i++)
   {
-    oled.print((char)packetbuffer[i]);
+    Serial.print(matrix1[i]);
+  }
+  Serial.println();
+  for (int i = 0; i < 6; i++)
+  {
+    Serial.print(matrix2[i]);
+  }
+  Serial.println();
+  for (int i = 0; i < 6; i++)
+  {
+    Serial.print(matrix3[i]);
+  }
+  Serial.println();
+  for (int i = 0; i < 6; i++)
+  {
+    Serial.print(matrix4[i]);
+  }
+  Serial.println();
+   for (int i = 0; i < 6; i++)
+  {
+    Serial.print(matrix5[i]);
+  }
+  Serial.println();
+  for (int i = 0; i < 6; i++)
+  {
+    Serial.print(matrix6[i]);
   }
 
-  oled.sendBuffer();
+  Serial.println();
+  /* for (int i = 0; i < 20; i++)
+    {
+     oled.print((char)packetbuffer[i]);
+    }
 
+    oled.sendBuffer();
+  */
+  delay(250);
 }
 
-void scankey(bool *m1, bool *m2) {
+void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5, bool *m6) {
 
-  digitalWrite(A0, LOW);
-  digitalWrite(A1, HIGH);
-  m1[0] = digitalRead(8);
-  m1[1] = digitalRead(9);
-  digitalWrite(A0, HIGH);
-  digitalWrite(A1, LOW);
-  m2[0] = digitalRead(8);
-  m2[1] = digitalRead(9);
+  digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD4, LOW); //KBB
+  digitalWrite(PIN_PE0, LOW); //KBC
+  digitalWrite(PIN_PE1, LOW); //KBD
+  digitalWrite(PIN_PD5, LOW); //KBE
+  m1[0] = digitalRead(PIN_PD7);
+  m1[1] = digitalRead(PIN_PB0);
+  m1[2] = digitalRead(PIN_PB1);
+  m1[3] = digitalRead(PIN_PC2);
+  m1[4] = digitalRead(PIN_PC1);
+  m1[5] = digitalRead(PIN_PC0);
+
+  digitalWrite(PIN_PD3, LOW); //KBA
+  digitalWrite(PIN_PD4, HIGH); //KBB
+  digitalWrite(PIN_PE0, LOW); //KBC
+  digitalWrite(PIN_PE1, LOW); //KBD
+  digitalWrite(PIN_PD5, LOW); //KBE
+  m2[0] = digitalRead(PIN_PD7);
+  m2[1] = digitalRead(PIN_PB0);
+  m2[2] = digitalRead(PIN_PB1);
+  m2[3] = digitalRead(PIN_PC2);
+  m2[4] = digitalRead(PIN_PC1);
+  m2[5] = digitalRead(PIN_PC0);
+
+ digitalWrite(PIN_PD3, LOW); //KBA
+  digitalWrite(PIN_PD4, LOW); //KBB
+  digitalWrite(PIN_PE0, HIGH); //KBC
+  digitalWrite(PIN_PE1, LOW); //KBD
+  digitalWrite(PIN_PD5, LOW); //KBE
+  m3[0] = digitalRead(PIN_PD7);
+  m3[1] = digitalRead(PIN_PB0);
+  m3[2] = digitalRead(PIN_PB1);
+  m3[3] = digitalRead(PIN_PC2);
+  m3[4] = digitalRead(PIN_PC1);
+  m3[5] = digitalRead(PIN_PC0);
+
+   digitalWrite(PIN_PD3, LOW); //KBA
+  digitalWrite(PIN_PD4, LOW); //KBB
+  digitalWrite(PIN_PE0, LOW); //KBC
+  digitalWrite(PIN_PE1, HIGH); //KBD
+  digitalWrite(PIN_PD5, LOW); //KBE
+  m4[0] = digitalRead(PIN_PD7);
+  m4[1] = digitalRead(PIN_PB0);
+  m4[2] = digitalRead(PIN_PB1);
+  m4[3] = digitalRead(PIN_PC2);
+  m4[4] = digitalRead(PIN_PC1);
+  m4[5] = digitalRead(PIN_PC0);
+
+   digitalWrite(PIN_PD3, LOW); //KBA
+  digitalWrite(PIN_PD4, LOW); //KBB
+  digitalWrite(PIN_PE0, LOW); //KBC
+  digitalWrite(PIN_PE1, LOW); //KBD
+  digitalWrite(PIN_PD5, HIGH); //KBE
+  m5[0] = digitalRead(PIN_PD7);
+  m5[1] = digitalRead(PIN_PB0);
+  m5[2] = digitalRead(PIN_PB1);
+  m5[3] = digitalRead(PIN_PC2);
+  m5[4] = digitalRead(PIN_PC1);
+  m5[5] = digitalRead(PIN_PC0);
+
+ 
 }
 
 void printbuffer() {
@@ -97,7 +197,7 @@ void sendbuffer() {  //butona basıldığında buffer aktar
   {
     Serial.print(packetbuffer[i]);
   }
-  ELECHOUSE_cc1101.SendData(packetbuffer,20 );
+  ELECHOUSE_cc1101.SendData(packetbuffer, 20 );
   for (int i = 0; i < 20; i++)
   {
     packetbuffer[i] = 0;
