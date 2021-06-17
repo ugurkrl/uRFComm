@@ -5,13 +5,14 @@ bool line1[10];
 bool line2[10];
 bool line3[10];
 
-char shiftkeys[] = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
-char keys[] = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ' ', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ' ', ' ', ' '};
+const char shiftkeys[30] PROGMEM = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
+const char keys[30] PROGMEM = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ' ', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ' ', ' ', ' '};
 
 byte packetbuffer[20];
 int bufferindex;
-int latchtime = 100;
+int latchtime = 200;
 bool latch = false;
+bool alt, shift, enter, del = false;
 unsigned long lastlatch = 0;
 U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled(U8G2_R0);
 
@@ -32,7 +33,7 @@ void setup() {
   oled.begin();
   // attachInterrupt(1, sendbuffer, RISING);
   cc1101set();
-
+  delay(50);
 
 
 }
@@ -60,17 +61,20 @@ void loop() {
   {
     Serial.print(line3[i]);
   }
+  Serial.println();
+  for (int i = 0; i < 20; i++)
+  {
+    Serial.print((char)packetbuffer[i]);
+  }
 
 
   Serial.println();
-  /* for (int i = 0; i < 20; i++)
-    {
-     oled.print((char)packetbuffer[i]);
-    }
+  for (int i = 0; i < 20; i++)
+  {
+    oled.print((char)packetbuffer[i]);
+  }
 
-    oled.sendBuffer();
-  */
-  delay(250);
+  oled.sendBuffer();
 }
 
 void scankey(bool *m1, bool *m2, bool *m3) {
@@ -139,11 +143,32 @@ void scankey(bool *m1, bool *m2, bool *m3) {
 }
 
 void printbuffer() {
+  int j;
   if (latch == false) {
+    if (line2[9] == 0) {
+      packetbuffer[bufferindex] = 0;
+      bufferindex = bufferindex - 1;
+    }
+    if (line3[7] == 0) {
+      shift = !shift;
+    }
+    if (line3[8] == 0) {
+      alt = !alt;
+    }
+    if (line3[9] == 0) {
+      enter = !enter;
+    }
+
     for (int i = 0; i < 10; i++)
     {
       if (line1[i] == 0) {
-        packetbuffer[bufferindex] = keys[i];
+        if (shift == true) {
+          packetbuffer[bufferindex] = pgm_read_byte_near(shiftkeys + i);
+
+        }
+        else {
+          packetbuffer[bufferindex] = pgm_read_byte_near(keys + i);
+        }
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
@@ -152,12 +177,15 @@ void printbuffer() {
         latch = true;
         lastlatch = millis();
       }
-    }
 
-    for (int i = 0; i < 10; i++)
-    {
-      if (line2[i] == 0) {
-        packetbuffer[bufferindex] = keys[i + 10];
+      if (line2[i] == 0 & i != 9) {
+        if (shift == true) {
+          packetbuffer[bufferindex] = pgm_read_byte_near(shiftkeys + i + 10);
+
+        }
+        else {
+          packetbuffer[bufferindex] = pgm_read_byte_near(keys + i + 10);
+        }
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
@@ -166,16 +194,21 @@ void printbuffer() {
         latch = true;
         lastlatch = millis();
       }
-    }
 
-    for (int i = 0; i < 10; i++)
-    {
-      if (line3[i] == 0) {
-        packetbuffer[bufferindex] = keys[i + 20];
+      if (line3[i] == 0 & i != 7 & i != 8 & i != 9) {
+        if (shift == true) {
+          packetbuffer[bufferindex] = pgm_read_byte_near(shiftkeys + i + 20);
+
+        }
+        else {
+          packetbuffer[bufferindex] = pgm_read_byte_near(keys + i + 20);
+        }
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
           bufferindex = 20;
         }
+
+
 
         latch = true;
         lastlatch = millis();
