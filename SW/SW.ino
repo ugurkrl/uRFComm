@@ -7,7 +7,7 @@ bool line3[10];
 const char shiftkeys[30] PROGMEM = {'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ' ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ' ', ' ', ' '};
 const char keys[30] PROGMEM = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ' ', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ' ', ' ', ' '};
 
-unsigned int packetbuffer[25];
+unsigned int packetbuffer[50];
 int bufferindex;
 int latchtime = 100;
 bool latch = false;
@@ -72,24 +72,25 @@ void loop() {
     }
   */
 
-  oled.clearBuffer();
+
 
   int lineht = oled.getMaxCharHeight();
-  oled.setFont(u8g2_font_helvB10_tr);
 
 
 
   do {
-   
-   
+
+    oled.clearBuffer();
+    oled.setFont(u8g2_font_helvB10_tr);
+    oled.drawFrame(0, 16, 128, 48);
     displine = 0;     //Bufferı yazdır
-    oled.setCursor(0, 28);
-    for (int i = 0; i < 25; i++) { 
+    oled.setCursor(2, 30);
+    for (int i = 0; i < 50; i++) {
       oled.print((char)packetbuffer[i]);
-      if (oled.tx > 115) {
+      if (oled.tx > 110) {
         displine = displine + 1;
-        oled.setCursor(0, 28 + (lineht * displine));
-        oled.tx = 0;
+        oled.setCursor(2, 30 + (lineht * displine));
+        oled.tx = 2;
       }
     }
   }
@@ -182,7 +183,7 @@ void printbuffer() {
       latch = true;
     }
     if (line3[9] == 0) { //Enter
-      enter = !enter;
+      sendBuffer();
       lastlatch = millis();
       latch = true;
     }
@@ -206,8 +207,8 @@ void printbuffer() {
           packetbuffer[bufferindex] = pgm_read_byte_near(keys + i);
         }
         bufferindex = bufferindex + 1;
-        if (bufferindex >= 25) {
-          bufferindex = 25;
+        if (bufferindex >= 50) {
+          bufferindex = 50;
         }
 
         latch = true;
@@ -223,8 +224,8 @@ void printbuffer() {
           packetbuffer[bufferindex] = pgm_read_byte_near(keys + i + 10);
         }
         bufferindex = bufferindex + 1;
-        if (bufferindex >= 25) {
-          bufferindex = 25;
+        if (bufferindex >= 50) {
+          bufferindex = 50;
         }
 
         latch = true;
@@ -240,8 +241,8 @@ void printbuffer() {
           packetbuffer[bufferindex] = pgm_read_byte_near(keys + i + 20);
         }
         bufferindex = bufferindex + 1;
-        if (bufferindex >= 25) {
-          bufferindex = 25;
+        if (bufferindex >= 50) {
+          bufferindex = 50;
         }
 
 
@@ -257,7 +258,7 @@ void printbuffer() {
 }
 
 void sendbuffer() {  //butona basıldığında buffer aktar
-  for (int i = 0; i < 20; i++)
+  for (int i = 0; i < 50; i++)
   {
     Serial.print(packetbuffer[i]);
   }
