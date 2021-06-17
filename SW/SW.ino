@@ -1,5 +1,6 @@
 #include <ELECHOUSE_CC1101_SRC_DRV.h>
 #include <U8g2lib.h>
+#include <HDQ.h>
 
 bool line1[10];
 bool line2[10];
@@ -15,7 +16,7 @@ bool alt, shift, enter, del = false;
 unsigned long lastlatch = 0;
 int displine = 1;
 U8G2_SSD1306_128X64_NONAME_1_HW_I2C oled(U8G2_R0);
-
+HDQ gg(7);
 void setup() {
   Serial.begin(115200);
   Serial.println("sup");
@@ -50,29 +51,9 @@ void loop() {
   scankey(line1 , line2, line3);
   printbuffer();
 
-  /* Serial.println();
-    for (int i = 0; i < 10; i++)
-    {
-     Serial.print(line1[i]);
-    }
-    Serial.println();
-    for (int i = 0; i < 10; i++)
-    {
-     Serial.print(line2[i]);
-    }
-    Serial.println();
-    for (int i = 0; i < 10; i++)
-    {
-     Serial.print(line3[i]);
-    }
-    Serial.println();
-    for (int i = 0; i < 20; i++)
-    {
-     Serial.print((char)packetbuffer[i]);
-    }
-  */
 
-
+  LSB = gg.read(0x2c); //read SoC
+  MSB = gg.read(0x2d);
 
   int lineht = oled.getMaxCharHeight();
 
@@ -183,7 +164,7 @@ void printbuffer() {
       latch = true;
     }
     if (line3[9] == 0) { //Enter
-      sendBuffer();
+      sendbuffer();
       lastlatch = millis();
       latch = true;
     }
@@ -260,7 +241,7 @@ void printbuffer() {
 void sendbuffer() {  //butona basıldığında buffer aktar
   for (int i = 0; i < 50; i++)
   {
-    Serial.print(packetbuffer[i]);
+    Serial.print((char)packetbuffer[i]);
   }
   //  ELECHOUSE_cc1101.SendData(packetbuffer, 20 );
   for (int i = 0; i < 20; i++)
