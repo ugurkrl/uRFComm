@@ -1,13 +1,10 @@
 #include <ELECHOUSE_CC1101_SRC_DRV.h>
-
 #include <U8g2lib.h>
 
-#include <ELECHOUSE_CC1101_SRC_DRV.h>
-bool matrix1[6];
-bool matrix2[6];
-bool matrix3[6];
-bool matrix4[6];
-bool matrix5[6];
+bool line1[10];
+bool line2[10];
+bool line3[10];
+
 char keys1[] = {'B', 'C'};
 char keys2[] = {'A', 'D'};
 byte packetbuffer[20];
@@ -43,35 +40,26 @@ void loop() {
   oled.clearBuffer();
   oled.setCursor(0, 16);
   oled.setFont(u8g2_font_helvB10_tr);
-  scankey(matrix1 , matrix2 ,matrix3, matrix4, matrix5);
+  scankey(line1 , line2, line3);
   printbuffer();
 
- 
+
   Serial.println();
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 10; i++)
   {
-    Serial.print(matrix1[i]);
+    Serial.print(line1[i]);
   }
   Serial.println();
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 10; i++)
   {
-    Serial.print(matrix2[i]);
+    Serial.print(line2[i]);
   }
   Serial.println();
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 10; i++)
   {
-    Serial.print(matrix3[i]);
+    Serial.print(line3[i]);
   }
-  Serial.println();
-  for (int i = 0; i < 6; i++)
-  {
-    Serial.print(matrix4[i]);
-  }
-  Serial.println();
-   for (int i = 0; i < 6; i++)
-  {
-    Serial.print(matrix5[i]);
-  }
+
 
   Serial.println();
   /* for (int i = 0; i < 20; i++)
@@ -84,76 +72,76 @@ void loop() {
   delay(250);
 }
 
-void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5) {
+void scankey(bool *m1, bool *m2, bool *m3) {
 
   digitalWrite(PIN_PD3, LOW); //KBA
   digitalWrite(PIN_PD4, HIGH); //KBB
   digitalWrite(PIN_PE0, HIGH); //KBC
   digitalWrite(PIN_PE1, HIGH); //KBD
   digitalWrite(PIN_PD5, HIGH); //KBE
-  m1[0] = digitalRead(PIN_PD7);
-  m1[1] = digitalRead(PIN_PB0);
-  m1[2] = digitalRead(PIN_PB1);
-  m1[3] = digitalRead(PIN_PC2);
-  m1[4] = digitalRead(PIN_PC1);
-  m1[5] = digitalRead(PIN_PC0);
+  m1[0] = digitalRead(PIN_PD7); //KB0
+  m1[1] = digitalRead(PIN_PB0); //KB1
+  m1[2] = digitalRead(PIN_PB1); //KB2
+  m1[3] = digitalRead(PIN_PC2); //KB3
+  m1[4] = digitalRead(PIN_PC1); //KB4
+  m1[5] = digitalRead(PIN_PC0); //KB5
 
   digitalWrite(PIN_PD3, HIGH); //KBA
   digitalWrite(PIN_PD4, LOW); //KBB
   digitalWrite(PIN_PE0, HIGH); //KBC
   digitalWrite(PIN_PE1, HIGH); //KBD
   digitalWrite(PIN_PD5, HIGH); //KBE
-  m2[0] = digitalRead(PIN_PD7);
-  m2[1] = digitalRead(PIN_PB0);
-  m2[2] = digitalRead(PIN_PB1);
-  m2[3] = digitalRead(PIN_PC2);
-  m2[4] = digitalRead(PIN_PC1);
-  m2[5] = digitalRead(PIN_PC0);
+  m2[0] = digitalRead(PIN_PD7); //KB0
+  m2[1] = digitalRead(PIN_PB0); //KB1
+  m2[2] = digitalRead(PIN_PB1); //KB2
+  m2[3] = digitalRead(PIN_PC2); //KB3
+  m2[4] = digitalRead(PIN_PC1); //KB4
+  m2[5] = digitalRead(PIN_PC0); //KB5
 
- digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD3, HIGH); //KBA
   digitalWrite(PIN_PD4, HIGH); //KBB
   digitalWrite(PIN_PE0, LOW); //KBC
   digitalWrite(PIN_PE1, HIGH); //KBD
   digitalWrite(PIN_PD5, HIGH); //KBE
-  m3[0] = digitalRead(PIN_PD7);
-  m3[1] = digitalRead(PIN_PB0);
-  m3[2] = digitalRead(PIN_PB1);
-  m3[3] = digitalRead(PIN_PC2);
-  m3[4] = digitalRead(PIN_PC1);
-  m3[5] = digitalRead(PIN_PC0);
+  m3[0] = digitalRead(PIN_PD7); //KB0
+  m3[1] = digitalRead(PIN_PB0); //KB1
+  m3[2] = digitalRead(PIN_PB1); //KB2
+  m3[3] = digitalRead(PIN_PC2); //KB3
+  m3[4] = digitalRead(PIN_PC1); //KB4
+  m3[5] = digitalRead(PIN_PC0); //KB5
 
-   digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD3, HIGH); //KBA
   digitalWrite(PIN_PD4, HIGH); //KBB
   digitalWrite(PIN_PE0, HIGH); //KBC
   digitalWrite(PIN_PE1, LOW); //KBD
   digitalWrite(PIN_PD5, HIGH); //KBE
-  m4[0] = digitalRead(PIN_PD7);
-  m4[1] = digitalRead(PIN_PB0);
-  m4[2] = digitalRead(PIN_PB1);
-  m4[3] = digitalRead(PIN_PC2);
-  m4[4] = digitalRead(PIN_PC1);
-  m4[5] = digitalRead(PIN_PC0);
+  m1[6] = digitalRead(PIN_PD7); //KB0
+  m2[6] = digitalRead(PIN_PB0); //KB1
+  m3[6] = digitalRead(PIN_PB1); //KB2
+  m3[7] = digitalRead(PIN_PC2); //KB3
+  m1[7] = digitalRead(PIN_PC1); //KB4
+  m2[7] = digitalRead(PIN_PC0); //KB5
 
-   digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD3, HIGH); //KBA
   digitalWrite(PIN_PD4, HIGH); //KBB
   digitalWrite(PIN_PE0, HIGH); //KBC
   digitalWrite(PIN_PE1, HIGH); //KBD
   digitalWrite(PIN_PD5, LOW); //KBE
-  m5[0] = digitalRead(PIN_PD7);
-  m5[1] = digitalRead(PIN_PB0);
-  m5[2] = digitalRead(PIN_PB1);
-  m5[3] = digitalRead(PIN_PC2);
-  m5[4] = digitalRead(PIN_PC1);
-  m5[5] = digitalRead(PIN_PC0);
+  m1[8] = digitalRead(PIN_PD7); //KB0
+  m1[9] = digitalRead(PIN_PB0); //KB1
+  m2[9] = digitalRead(PIN_PB1); //KB2
+  m2[8] = digitalRead(PIN_PC2); //KB3
+  m3[9] = digitalRead(PIN_PC1); //KB4
+  m3[8] = digitalRead(PIN_PC0); //KB5
 
- 
+
 }
 
 void printbuffer() {
   if (latch == false) {
     for (int i = 0; i < 2; i++)
     {
-      if (matrix1[i] == 0) {
+      if (line1[i] == 0) {
         packetbuffer[bufferindex] = keys1[i];
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
@@ -167,7 +155,7 @@ void printbuffer() {
 
     for (int i = 0; i < 2; i++)
     {
-      if (matrix2[i] == 0) {
+      if (line2[i] == 0) {
         packetbuffer[bufferindex] = keys2[i];
         bufferindex = bufferindex + 1;
         if (bufferindex >= 20) {
