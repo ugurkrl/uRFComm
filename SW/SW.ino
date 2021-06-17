@@ -8,7 +8,6 @@ bool matrix2[6];
 bool matrix3[6];
 bool matrix4[6];
 bool matrix5[6];
-bool matrix6[6];
 char keys1[] = {'B', 'C'};
 char keys2[] = {'A', 'D'};
 byte packetbuffer[20];
@@ -32,8 +31,6 @@ void setup() {
   pinMode(PIN_PC2, INPUT_PULLUP);
   pinMode(PIN_PC1, INPUT_PULLUP);
   pinMode(PIN_PC0, INPUT_PULLUP);
-  
-  pinMode(3, INPUT);
   oled.begin();
   // attachInterrupt(1, sendbuffer, RISING);
   cc1101set();
@@ -46,7 +43,7 @@ void loop() {
   oled.clearBuffer();
   oled.setCursor(0, 16);
   oled.setFont(u8g2_font_helvB10_tr);
-  scankey(matrix1 , matrix2 ,matrix3, matrix4, matrix5, matrix6);
+  scankey(matrix1 , matrix2 ,matrix3, matrix4, matrix5);
   printbuffer();
 
  
@@ -75,11 +72,6 @@ void loop() {
   {
     Serial.print(matrix5[i]);
   }
-  Serial.println();
-  for (int i = 0; i < 6; i++)
-  {
-    Serial.print(matrix6[i]);
-  }
 
   Serial.println();
   /* for (int i = 0; i < 20; i++)
@@ -92,13 +84,13 @@ void loop() {
   delay(250);
 }
 
-void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5, bool *m6) {
+void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5) {
 
-  digitalWrite(PIN_PD3, HIGH); //KBA
-  digitalWrite(PIN_PD4, LOW); //KBB
-  digitalWrite(PIN_PE0, LOW); //KBC
-  digitalWrite(PIN_PE1, LOW); //KBD
-  digitalWrite(PIN_PD5, LOW); //KBE
+  digitalWrite(PIN_PD3, LOW); //KBA
+  digitalWrite(PIN_PD4, HIGH); //KBB
+  digitalWrite(PIN_PE0, HIGH); //KBC
+  digitalWrite(PIN_PE1, HIGH); //KBD
+  digitalWrite(PIN_PD5, HIGH); //KBE
   m1[0] = digitalRead(PIN_PD7);
   m1[1] = digitalRead(PIN_PB0);
   m1[2] = digitalRead(PIN_PB1);
@@ -106,11 +98,11 @@ void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5, bool *m6) {
   m1[4] = digitalRead(PIN_PC1);
   m1[5] = digitalRead(PIN_PC0);
 
-  digitalWrite(PIN_PD3, LOW); //KBA
-  digitalWrite(PIN_PD4, HIGH); //KBB
-  digitalWrite(PIN_PE0, LOW); //KBC
-  digitalWrite(PIN_PE1, LOW); //KBD
-  digitalWrite(PIN_PD5, LOW); //KBE
+  digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD4, LOW); //KBB
+  digitalWrite(PIN_PE0, HIGH); //KBC
+  digitalWrite(PIN_PE1, HIGH); //KBD
+  digitalWrite(PIN_PD5, HIGH); //KBE
   m2[0] = digitalRead(PIN_PD7);
   m2[1] = digitalRead(PIN_PB0);
   m2[2] = digitalRead(PIN_PB1);
@@ -118,11 +110,11 @@ void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5, bool *m6) {
   m2[4] = digitalRead(PIN_PC1);
   m2[5] = digitalRead(PIN_PC0);
 
- digitalWrite(PIN_PD3, LOW); //KBA
-  digitalWrite(PIN_PD4, LOW); //KBB
-  digitalWrite(PIN_PE0, HIGH); //KBC
-  digitalWrite(PIN_PE1, LOW); //KBD
-  digitalWrite(PIN_PD5, LOW); //KBE
+ digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD4, HIGH); //KBB
+  digitalWrite(PIN_PE0, LOW); //KBC
+  digitalWrite(PIN_PE1, HIGH); //KBD
+  digitalWrite(PIN_PD5, HIGH); //KBE
   m3[0] = digitalRead(PIN_PD7);
   m3[1] = digitalRead(PIN_PB0);
   m3[2] = digitalRead(PIN_PB1);
@@ -130,11 +122,11 @@ void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5, bool *m6) {
   m3[4] = digitalRead(PIN_PC1);
   m3[5] = digitalRead(PIN_PC0);
 
-   digitalWrite(PIN_PD3, LOW); //KBA
-  digitalWrite(PIN_PD4, LOW); //KBB
-  digitalWrite(PIN_PE0, LOW); //KBC
-  digitalWrite(PIN_PE1, HIGH); //KBD
-  digitalWrite(PIN_PD5, LOW); //KBE
+   digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD4, HIGH); //KBB
+  digitalWrite(PIN_PE0, HIGH); //KBC
+  digitalWrite(PIN_PE1, LOW); //KBD
+  digitalWrite(PIN_PD5, HIGH); //KBE
   m4[0] = digitalRead(PIN_PD7);
   m4[1] = digitalRead(PIN_PB0);
   m4[2] = digitalRead(PIN_PB1);
@@ -142,11 +134,11 @@ void scankey(bool *m1, bool *m2,bool *m3, bool *m4,bool *m5, bool *m6) {
   m4[4] = digitalRead(PIN_PC1);
   m4[5] = digitalRead(PIN_PC0);
 
-   digitalWrite(PIN_PD3, LOW); //KBA
-  digitalWrite(PIN_PD4, LOW); //KBB
-  digitalWrite(PIN_PE0, LOW); //KBC
-  digitalWrite(PIN_PE1, LOW); //KBD
-  digitalWrite(PIN_PD5, HIGH); //KBE
+   digitalWrite(PIN_PD3, HIGH); //KBA
+  digitalWrite(PIN_PD4, HIGH); //KBB
+  digitalWrite(PIN_PE0, HIGH); //KBC
+  digitalWrite(PIN_PE1, HIGH); //KBD
+  digitalWrite(PIN_PD5, LOW); //KBE
   m5[0] = digitalRead(PIN_PD7);
   m5[1] = digitalRead(PIN_PB0);
   m5[2] = digitalRead(PIN_PB1);
