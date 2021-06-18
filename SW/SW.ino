@@ -1,4 +1,4 @@
-#include <ELECHOUSE_CC1101_SRC_DRV.h>
+h#include <ELECHOUSE_CC1101_SRC_DRV.h>
 #include <U8g2lib.h>
 #include <HDQ.h>
 
@@ -14,9 +14,12 @@ int latchtime = 100;
 bool latch = false;
 bool alt, shift, enter, del = false;
 unsigned long lastlatch = 0;
+int MSB, LSB;
+int soc, tte;
+float volt;
 int displine = 1;
 U8G2_SSD1306_128X64_NONAME_1_HW_I2C oled(U8G2_R0);
-HDQ gg(7);
+HDQ gg(PIN_PD6);
 void setup() {
   Serial.begin(115200);
   Serial.println("sup");
@@ -52,17 +55,34 @@ void loop() {
   printbuffer();
 
 
-  LSB = gg.read(0x2c); //read SoC
+  LSB = gg.read(0x2c); //SoC oku
   MSB = gg.read(0x2d);
+  soc = word(MSB, LSB);
 
+  LSB = gg.read(0x16); //TTE oku
+  MSB = gg.read(0x17);
+  tte = word(MSB, LSB);
+
+  LSB = gg.read(8); //Read voltage
+  MSB = gg.read(9);
+  int volttemp = word(MSB, LSB);
+  volt = volttemp *0.001;
   int lineht = oled.getMaxCharHeight();
 
 
 
   do {
 
-    oled.clearBuffer();
+
     oled.setFont(u8g2_font_helvB10_tr);
+    oled.setCursor(2, lineht);//pil yüzdesi
+    oled.print("%");
+    oled.print(soc);
+    oled.setCursor(80, lineht);//bitişe kalan zaman
+    oled.print(tte);
+    oled.print("min"); //Saat formatına çevirilecek
+          
+
     oled.drawFrame(0, 16, 128, 48);
     displine = 0;     //Bufferı yazdır
     oled.setCursor(2, 30);
